@@ -1,0 +1,26 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>Auto Marphic</h1>
+        <script>
+            let n = parseInt(prompt("Enter the number: "));
+            let m = n;
+            let rem=1;
+            while(n>0){
+                let d = n%10;
+                rem = rem*10;
+                n = parseInt(n/10);
+            }
+            let sq = m*m;
+            if(sq%rem==m){
+                console.log("Auto Morphic");
+            }
+            else{
+                console.log("Sorry, It's Not Auto Morphic.");
+            }
+
+        </script>
+    </body>
+</html>

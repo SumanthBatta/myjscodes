@@ -1,0 +1,78 @@
+<html>
+<head>
+    <title>Zomato Booking</title>
+    <link rel="stylesheet" href="../Project1/SRC/fontawesome-free-6.4.0-web/fontawesome-free-6.4.0-web/css/all.css">
+    <link rel="stylesheet" href="../Project1/SRC/MDB-Free_4.20.0/css/bootstrap.css">
+   
+    <link rel="stylesheet" href="../project1/SRC/MDB-Free_4.20.0/css/mdb.css">
+
+</head>
+<body>
+    <div class = "container">
+        <div class = "row">
+            <div class = "col">
+                <h1 class="text-success">ZomatoCart:-</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit
+                        . Magni, quas nobis. Et at illo earum quo incidunt. Mollitia nihil p
+                        erferendis ipsum incidunt nisi rem, quo accusantium quaerat veniam iusto dolores.</p>
+                        
+                <button class="btn btn-success btn-md">ORDER NOW</button>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid mt-2">
+        <div class="row">
+            <div class="col">
+                <table class="table">
+                    <thead class="bg-danger text-white">
+                        <tr>
+                            <th>S.No</th>
+                            <th>images</th>
+                            <th>name</th>
+                            <th>price</th>
+                            <th>QTY</th>
+                            <th>Total Price</th>
+                        </tr>
+                
+
+                    </thead>
+                    <tbody class="table-danger">
+                        <tr>
+                            <td>1.</td>
+                            <td>Images</td>
+                            <td>Biriyani</td>
+                            <td>299.00</td>
+                            <td>
+                           <i class="fa fa-minus pr-2" onclick="decrement()"></i>
+                           <span id="count">0</span>
+                          <i class="fa fa-plus pl-2" onclick="increment()"></i>
+                            </td>
+                            <td  id="total">299.00</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+<script>
+        let spanTag = document.querySelector("#count");
+        let total=299.00;
+
+        let count = 0;
+        function increment(){
+            count++;
+            total=total*count;
+            spanTag.innerText=count;
+        }
+     function decrement(){
+        if(count>0){
+            count--;
+        }
+            spanTag.innerText=count;
+        }
+        
+    </script>
+         
+</body>
+</html>

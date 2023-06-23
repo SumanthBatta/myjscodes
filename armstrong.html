@@ -1,0 +1,34 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>Armstrong</h1>
+        <script>
+         let n = parseInt(prompt("Enter the number: "));
+         let m = n;
+         let count=0;
+         while(m>0){
+            count++;
+            m=parseInt(m/10);
+         }
+         let sum= 0;
+         let k = n;
+         while(k>0){
+            let d = k%10;
+            let prod = 1;
+            for(let i = 1; i<=count;i++){
+                prod *=d;
+            }
+            sum+=prod;
+            k = parseInt(k/10);
+         }
+         if(n==sum){
+            console.log("yes, ArmsStrong");
+         }
+         else{
+            console.log("No, Not Armstrong");
+         }
+        </script>
+    </body>
+</html>

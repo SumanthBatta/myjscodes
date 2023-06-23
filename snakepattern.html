@@ -1,0 +1,35 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>Snake Pattern</h1>
+        <script>
+            let n = 5;
+            let k = 1;
+            let str = "";
+            for(let i = 1; i<=n;i++){
+                if(i%2!=0){
+                    for(let j = 1; j<=n;j++){
+                        str +="k";
+                        if(j<n){
+                            k++;
+                        }
+                    }
+                    k+=5;
+                    str +="\n";
+                }
+                else{
+                    for(let j = 1; j<=n;j++){
+                        str+="k";
+                        if(j<n){
+                            k--;
+                        }
+                    }
+                    k+=4
+                    str +="\n";
+                }
+            }
+        </script>
+    </body>
+</html>
