@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Js Dom</title>
+    <link rel="stylesheet" href="../MovieZone/fontawesome-free-6.4.0-web/css/all.css">
+    <link rel="stylesheet" href="../Project1/SRC/MDB-Free_4.20.0/css/bootstrap.css">
+
+    <link rel="stylesheet" href="../project1/SRC/MDB-Free_4.20.0/css/mdb.css">
+	<style>
+		input[type=checkbox]
+		{
+			height:20px!important;
+			width:20px!important;
+		}
+	</style>
+</head>
+<body>
+	
+	<div class="container mt-5">
+		<div class="row">
+			<div class="col-md-5 m-auto">
+				<div class="card">
+					<div class="card-header bg-primary">
+						<h1 class="text-white text-center">Js Password Box</h1>
+					</div>
+					<div class="card-body bg-light">
+						<div class="input-group mb-3">
+ 							 <div class="input-group-prepend">
+   								 <div class="input-group-text">
+     								 <input type="checkbox" id="check-box">
+   								 </div>
+  							 </div>
+ 							 <input type="password" class="form-control" placeholder="Enter Password" id="pw-box">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+<!-- Script Code -->
+<script>
+	let checkBox=document.querySelector('#check-box');
+	let passwordBox=document.querySelector('#pw-box');
+
+	checkBox.addEventListener('change',function()
+	{
+		let typeValue=passwordBox.getAttribute('type');
+		//alert(typeValue);
+
+		if(typeValue==="password")
+		{
+			passwordBox.setAttribute('type','text');
+		}
+		else
+		{
+			passwordBox.setAttribute('type','password');
+		}
+
+
+	})
+</script>
+</body>
+</html>
